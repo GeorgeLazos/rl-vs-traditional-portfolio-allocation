@@ -135,7 +135,7 @@ LEAKAGE CHECKLIST — verify before reporting any result.
 """
 
 if __name__ == "__main__":
-    print("MIDAS splits:")
+    print("splits:")
     print(describe())
     print(f"\n  fetch range: {FETCH_START} -> {FETCH_END}")
     print(f"  (includes {WARMUP_START} -> {TRAIN_START} warm-up for indicators)")
