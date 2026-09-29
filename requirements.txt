@@ -10,3 +10,4 @@ yfinance==1.2.1        # ETF prices + the price cross-check
 scipy==1.15.1          # SLSQP solver for the optimiser baselines
 scikit-learn==1.8.0    # Ledoit-Wolf covariance shrinkage
 matplotlib==3.9.3      # figures from the run artifacts
+torch==2.13.0          # PPO agents: networks and training
