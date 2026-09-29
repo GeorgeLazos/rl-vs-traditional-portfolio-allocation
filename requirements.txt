@@ -1,4 +1,4 @@
-# MIDAS
+# RL vs traditional portfolio allocation
 # Python 3.12
 
 pandas==3.0.2          # tabular data everywhere
