@@ -41,11 +41,11 @@ SPLITS = {
 #   bull run, the low-rate era and the 2015-16 correction: enough regime
 #   variety that the policy is not fitted to one market state.
 #
-# VAL 2019-2021 — COVID crash and recovery. Deliberately a different KIND of
+# VAL 2019-2022 — COVID crash and recovery. Deliberately a different KIND of
 #   shock from 2008: faster, policy-driven, sharper reversal. Hyperparameters
 #   tuned here are not tuned on a repeat of the training regime.
 #
-# TEST 2022-2026 — rate hikes, inflation, and the bond-equity correlation
+# TEST 2023-2026 — rate hikes, inflation, and the bond-equity correlation
 #   breakdown (2022 was rare in that stocks AND bonds fell together, which
 #   punishes naive diversification).
 
