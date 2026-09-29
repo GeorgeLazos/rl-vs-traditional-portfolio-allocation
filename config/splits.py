@@ -1,5 +1,5 @@
 """
-MIDAS — date splits.
+Date splits.
 
 Single source of truth for train / validation / test boundaries. Every stage
 that touches dates imports from here: the collectors (what range to fetch),
