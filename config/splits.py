@@ -16,10 +16,10 @@ TRAIN_START = "2005-01-01"
 TRAIN_END   = "2018-12-31"      # 14 years
 
 VAL_START   = "2019-01-01"
-VAL_END     = "2021-12-31"      # 3 years
+VAL_END     = "2022-12-31"      # 4 years
 
-TEST_START  = "2022-01-01"
-TEST_END    = "2026-06-30"      # 4.5 years
+TEST_START  = "2023-01-01"
+TEST_END    = "2026-06-30"      # 3.5 years
 
 SPLITS = {
     "train": (TRAIN_START, TRAIN_END),
@@ -41,13 +41,13 @@ SPLITS = {
 #   bull run, the low-rate era and the 2015-16 correction: enough regime
 #   variety that the policy is not fitted to one market state.
 #
-# VAL 2019-2022 — COVID crash and recovery. Deliberately a different KIND of
-#   shock from 2008: faster, policy-driven, sharper reversal. Hyperparameters
-#   tuned here are not tuned on a repeat of the training regime.
+# VAL 2019-2022 — COVID crash and recovery, then the 2022 rate shock, when
+#   stocks AND bonds fell together. Two different KINDS of shock from 2008,
+#   so hyperparameters tuned here are not tuned on a repeat of the training
+#   regime.
 #
-# TEST 2023-2026 — rate hikes, inflation, and the bond-equity correlation
-#   breakdown (2022 was rare in that stocks AND bonds fell together, which
-#   punishes naive diversification).
+# TEST 2023-2026 — the higher-rate market after the 2022 hikes, unseen until
+#   the single final pass.
 
 # ---------------------------------------------------------------------------
 # WARM-UP
