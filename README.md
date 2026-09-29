@@ -4,7 +4,7 @@
 
 An end-to-end study of whether deep reinforcement learning can beat classical portfolio allocation, built as my MSc dissertation at Queen Mary University of London.
 
-I developed a pipeline that collects and aligns over 20 years of point-in-time market data, engineers 75 features from it, and trains PPO agents to allocate capital across 119 assets. The agents were then tested against four classical strategies on four and a half years of data they had never seen, with every strategy trading through the same simulator at the same costs.
+I developed a pipeline that collects and aligns over 20 years of point-in-time market data, engineers 75 features from it, and trains PPO agents to allocate capital across 119 assets. The agents were then tested against four classical strategies on three and a half years of data they had never seen, with every strategy trading through the same simulator at the same costs.
 
 ### At a glance
 
@@ -98,8 +98,8 @@ Trades cost 10 bp for equities and REITs, 5 bp for bond and commodity ETFs and 1
 | Split | Period | Used for |
 |---|---|---|
 | Train | 2005 to 2018 | Fitting, with walk-forward folds over 2012 to 2017 for model selection |
-| Validation | 2019 to 2021 | Checkpoint selection |
-| Test | 2022 to June 2026 | One final pass, every strategy together |
+| Validation | 2019 to 2022 | Checkpoint selection |
+| Test | 2023 to June 2026 | One final pass, every strategy together |
 
 - The split boundaries live in one file, `config/splits.py`, which every stage imports
 - Training is seeded end to end, and deterministic evaluation reproduces a backtest exactly
