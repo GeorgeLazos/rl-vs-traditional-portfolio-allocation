@@ -3,7 +3,7 @@ portfolio/models/allocate.py — the allocation agent's world, its
 verification, and its training run.
 
 The four deployed sleeve agents are FROZEN: each best.pt is evaluated
-once, deterministically, over 2005–2021, and its daily portfolio return
+once, deterministically, over 2005–2022, and its daily portfolio return
 becomes one synthetic asset. The allocator trades those four synthetic
 assets plus CASH on the monthly clock, observing the market feature
 block (synthetic assets carry no asset-grain features). Costs charge
