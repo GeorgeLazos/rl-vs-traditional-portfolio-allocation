@@ -1,5 +1,5 @@
 """
-MIDAS — asset universe.
+Asset universe.
 
 Single source of truth for what gets fetched, trained on and allocated across.
 Every collector and every downstream stage imports from here.
