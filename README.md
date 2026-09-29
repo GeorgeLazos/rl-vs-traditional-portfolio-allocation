@@ -15,10 +15,6 @@ I developed a pipeline that collects and aligns over 20 years of point-in-time m
 - **One simulator for everything:** agents and benchmarks trade through the same engine with the same costs
 - **Test split touched once:** the code refuses to run it without an explicit flag, and logs every agent test run
 
-## Result
-
-No freely learned agent beat Markowitz. The best one reached a test Sharpe ratio of **1.18**, level with the naive 1/N portfolio, against **1.41** for Markowitz. The anchored tilt matched Markowitz, but by construction rather than by learning anything new.
-
 <!-- Fill in from reports/baselines_report.md and the agent run reports. -->
 
 ## Result
