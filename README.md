@@ -21,14 +21,24 @@ No freely learned agent beat Markowitz. The best one reached a test Sharpe ratio
 
 <!-- Fill in from reports/baselines_report.md and the agent run reports. -->
 
-| Strategy | Annual return | Volatility | Sharpe | Max drawdown | Annual turnover |
-|---|---|---|---|---|---|
-| Markowitz | x.x% | x.x% | 1.41 | x.x% | x.xx |
-| Minimum variance | x.x% | x.x% | x.xx | x.x% | x.xx |
-| Risk parity | x.x% | x.x% | x.xx | x.x% | x.xx |
-| Equal weight (1/N) | x.x% | x.x% | x.xx | x.x% | x.xx |
-| Best PPO agent | x.x% | x.x% | 1.18 | x.x% | x.xx |
-| Markowitz-anchored tilt | x.x% | x.x% | x.xx | x.x% | x.xx |
+## Result
+
+No freely learned agent beat Markowitz. The strongest, the monthly monolithic agent, matched 1/N at a Sharpe ratio of 1.18, against 1.41 for Markowitz. The two tilt agents were the only learned models to match the benchmark, at 1.43 and 1.48, but the plain Markowitz weights traded under the tilt agents' own conventions score almost the same, so most of that edge comes from execution rather than learning. The monthly hierarchy was the most defensive learned strategy, with the shallowest drawdown of any learned model.
+
+| Strategy | Return | Volatility | Sharpe | Sortino | Max drawdown | Calmar | Turnover |
+|---|---|---|---|---|---|---|---|
+| Tilt, daily | 29.2% | 15.0% | 1.48 (0.01) | 2.65 | -10.1% | 2.89 | 3.7 |
+| Tilt, monthly | 28.5% | 15.2% | 1.43 (0.01) | 2.51 | -11.5% | 2.48 | 3.4 |
+| Markowitz | 28.2% | 15.2% | 1.41 | 2.49 | -11.5% | 2.46 | 3.4 |
+| Monolithic, monthly | 21.4% | 13.3% | 1.18 (0.14) | 2.29 | -16.3% | 1.32 | 1.5 |
+| 1/N | 20.0% | 12.2% | 1.18 | 2.32 | -14.6% | 1.37 | 0.3 |
+| Hierarchy, daily | 15.2% | 9.4% | 1.06 (0.04) | 2.27 | -10.5% | 1.45 | 0.9 |
+| Risk parity | 14.8% | 9.4% | 1.03 | 2.25 | -10.4% | 1.42 | 0.3 |
+| Monolithic, daily | 17.5% | 12.4% | 1.00 (0.07) | 2.02 | -14.5% | 1.21 | 4.2 |
+| Hierarchy, monthly | 13.8% | 8.9% | 0.99 (0.12) | 2.21 | -8.9% | 1.55 | 1.0 |
+| Minimum variance | 7.2% | 4.1% | 0.60 | 2.56 | -4.4% | 1.64 | 0.9 |
+
+Test window 2023 to June 2026, after trading costs. Return and volatility are annualised and turnover is the fraction of the portfolio traded per year. Learned models are three-seed means, with the standard deviation across seeds in brackets.
 
 <!-- Add one or two key figures, e.g. docs/equity_test.png and docs/drawdown_test.png -->
 <!-- ![Test-period equity curves](docs/equity_test.png) -->
